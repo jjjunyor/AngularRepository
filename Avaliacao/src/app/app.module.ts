@@ -11,8 +11,7 @@ import { BindingsComponent } from './bindings/bindings.component';
   declarations: [
     AppComponent,
     ProdutoComponent,
-    BindingsComponent,
-
+    BindingsComponent
   ],
   imports: [
     BrowserModule,

@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve --proxy-config proxy.conf.js",
+    "start": "ng serve --proxy-config proxy.config.json",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
@@ -22,6 +22,7 @@
     "ag-grid": "^18.1.2",
     "ag-grid-angular": "^21.1.0",
     "ag-grid-community": "^21.1.1",
+    "cors": "^2.8.5",
     "guid-typescript": "^1.0.9",
     "rxjs": "~6.4.0",
     "rxjs-compat": "^6.5.2",

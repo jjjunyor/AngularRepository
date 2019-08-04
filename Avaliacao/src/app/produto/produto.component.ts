@@ -36,33 +36,35 @@ export class ProdutoComponent implements OnInit {
       { headerName: 'Quantidade', field: 'quantidade' },
       { headerName: 'Preço', field: 'valor' }
     ];
-    this._Produto=null;
-    this._Produto= rowData;
+    this._Produto = null;
+    this._Produto = rowData;
+
+
   }
- 
+
 
   ngOnInit() {
-
-
-
   }
 
   GerarTokenFunc() {
 
-    this._strToken = Guid.create().toString();
+    this._strToken = Guid.create().toString().substr(0, 17);
     this._segurancaService.GerarToken(this._strToken);
     this._Produto = null;
+    console.log("pesquisar called" + this._strToken);
   }
   PesquisarFunc() {
+
+    this._produtoService.getProdutos(this._strToken).subscribe(x => {
+      this._Produto = x;
+    });
 
     if (this._strToken == "" || this._strToken == null) {
       alert("deve gerar o token primeiro");
     } else {
-      this._produtoService.getProdutos(this._strToken).subscribe(x => {
-        this._Produto = x;
-      });
+
       this._strToken = "";
-      console.log("pesquisar called" + this._Produto);
+
     }
   }
 

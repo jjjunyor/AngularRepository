@@ -1,19 +1,12 @@
 <p>
     <button (click)="GerarTokenFunc()">Gerar Token</button>
-    <input type="text" value="{{_strToken}}" size="30" readonly >
+    <input type="text" value="{{_strToken}}" size="30" readonly>
 </p>
-   <P>
+<P>
     <button (click)="PesquisarFunc()">Pesquisar</button>
-   </P>
+</P>
 
-        <ag-grid-angular 
-        style="width:850px; height:200px;" 
-        class="ag-theme-balham"
-        [enableSorting]="true"
-        [columnDefs]="columnDefs"
-        [rowData]="_Produto" 
-        >
+<ag-grid-angular style="width:850px; height:200px;" class="ag-theme-balham" [enableSorting]="true"
+    [columnDefs]="columnDefs" [rowData]="_Produto">
 
-        </ag-grid-angular>
-
- 
+</ag-grid-angular>
