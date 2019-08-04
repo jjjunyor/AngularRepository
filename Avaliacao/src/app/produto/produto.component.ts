@@ -54,9 +54,6 @@ export class ProdutoComponent implements OnInit {
     console.log("pesquisar called" + this._strToken);
   }
   PesquisarFunc() {
-
-
-
     if (this._strToken == "" || this._strToken == null) {
       alert("deve gerar o token primeiro");
     } else {
