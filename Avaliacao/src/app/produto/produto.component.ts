@@ -55,14 +55,14 @@ export class ProdutoComponent implements OnInit {
   }
   PesquisarFunc() {
 
-    this._produtoService.getProdutos(this._strToken).subscribe(x => {
-      this._Produto = x;
-    });
+
 
     if (this._strToken == "" || this._strToken == null) {
       alert("deve gerar o token primeiro");
     } else {
-
+      this._produtoService.getProdutos(this._strToken).subscribe(x => {
+        this._Produto = x;
+      });
       this._strToken = "";
 
     }
